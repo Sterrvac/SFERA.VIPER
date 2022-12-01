@@ -9,6 +9,7 @@ import Foundation
 
 
 protocol ViperList_Presenter_Protocol {
+    
     var router: ViperList_Router_Protocol? {get set}
     var view: ViperList_View_Protocol? {get set}
     var interactor: ViperList_Interactor_Protocol? {get set}
@@ -19,6 +20,7 @@ protocol ViperList_Presenter_Protocol {
 }
 
 class ViperList_Presenter: ViperList_Presenter_Protocol {
+    
     var router: ViperList_Router_Protocol?
     
     var view: ViperList_View_Protocol?

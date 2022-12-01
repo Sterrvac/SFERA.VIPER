@@ -22,6 +22,7 @@ class ViperListViewController: UIViewController, ViperList_View_Protocol {
     // MARK: - COMPONENT
     private let tableView: UITableView = UITableView()
     private let messageLabel: UILabel = UILabel()
+    var searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - PROPERTY
     var presenter: ViperList_Presenter_Protocol?
@@ -39,6 +40,9 @@ class ViperListViewController: UIViewController, ViperList_View_Protocol {
         if let seledtIndex = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: seledtIndex, animated: true)
         }
+        navigationItem.searchController = searchController
+        view.backgroundColor = .systemBackground
+        navigationItem.title = "Search"
     }
 }
 

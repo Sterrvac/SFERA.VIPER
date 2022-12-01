@@ -22,8 +22,6 @@
 		FAEB6E752934CE4600E75078 /* ViperDetail_Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E742934CE4600E75078 /* ViperDetail_Entity.swift */; };
 		FAEB6E772934CE5900E75078 /* ViperDetail_Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E762934CE5900E75078 /* ViperDetail_Router.swift */; };
 		FAEB6E7A2934DC2800E75078 /* UllmageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */; };
-		FAEB6E7D2935CB0800E75078 /* SearchBarVС.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E7C2935CB0800E75078 /* SearchBarVС.swift */; };
-		FAEB6E812935D88000E75078 /* TabBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E802935D88000E75078 /* TabBarMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +42,6 @@
 		FAEB6E742934CE4600E75078 /* ViperDetail_Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Entity.swift; sourceTree = "<group>"; };
 		FAEB6E762934CE5900E75078 /* ViperDetail_Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Router.swift; sourceTree = "<group>"; };
 		FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UllmageView+Extension.swift"; sourceTree = "<group>"; };
-		FAEB6E7C2935CB0800E75078 /* SearchBarVС.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBarVС.swift"; sourceTree = "<group>"; };
-		FAEB6E802935D88000E75078 /* TabBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +76,6 @@
 			children = (
 				FAEB6E5E29348A9F00E75078 /* Files */,
 				FAEB6E4A29348A6100E75078 /* AppDelegate.swift */,
-				FAEB6E7B2935CAE900E75078 /* SearchBar */,
 				FAEB6E5F29348E2D00E75078 /* ViperList */,
 				FAEB6E6D2934CD8700E75078 /* ViperDetail */,
 				FAEB6E782934DBB700E75078 /* Extentions */,
@@ -137,15 +132,6 @@
 				FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */,
 			);
 			path = Extentions;
-			sourceTree = "<group>";
-		};
-		FAEB6E7B2935CAE900E75078 /* SearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				FAEB6E802935D88000E75078 /* TabBarMenu.swift */,
-				FAEB6E7C2935CB0800E75078 /* SearchBarVС.swift */,
-			);
-			name = SearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +214,6 @@
 				FAEB6E7A2934DC2800E75078 /* UllmageView+Extension.swift in Sources */,
 				FAEB6E6F2934CDFD00E75078 /* ViperDetail_View.swift in Sources */,
 				FAEB6E6729348F0B00E75078 /* ViperList_Entity.swift in Sources */,
-				FAEB6E7D2935CB0800E75078 /* SearchBarVС.swift in Sources */,
-				FAEB6E812935D88000E75078 /* TabBarMenu.swift in Sources */,
 				FAEB6E712934CE1400E75078 /* ViperDetail_Interactor.swift in Sources */,
 				FAEB6E6129348E8C00E75078 /* ViperList_View.swift in Sources */,
 				FAEB6E4B29348A6100E75078 /* AppDelegate.swift in Sources */,

@@ -20,9 +20,9 @@ protocol ViperList_View_Protocol {
 class ViperListViewController: UIViewController, ViperList_View_Protocol {
 
     // MARK: - COMPONENT
-    private let tableView: UITableView = UITableView()
-    private let messageLabel: UILabel = UILabel()
-    var searchController = UISearchController(searchResultsController: nil)
+    private let tableView = UITableView()
+    private let messageLabel = UILabel()
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - PROPERTY
     var presenter: ViperList_Presenter_Protocol?
@@ -31,6 +31,7 @@ class ViperListViewController: UIViewController, ViperList_View_Protocol {
     // MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar()
         style()
         layout()
         presenter?.viewDidLoad()
@@ -40,13 +41,16 @@ class ViperListViewController: UIViewController, ViperList_View_Protocol {
         if let seledtIndex = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: seledtIndex, animated: true)
         }
-        navigationItem.searchController = searchController
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "Search"
     }
 }
 
 extension ViperListViewController {
+    func searchBar() {
+        navigationItem.searchController = searchController
+        view.backgroundColor = .systemBackground
+        navigationItem.title = "Search"
+    }
+    
     func style() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

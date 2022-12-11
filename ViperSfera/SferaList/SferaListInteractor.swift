@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol ViperList_Interactor_Protocol {
-    var presenter: ViperList_Presenter_Protocol? {get set}
+protocol SferaListInteractorProtocol {
+    var presenter: SferaListPresenterProtocol? {get set}
     
     func getViperListData()
 }
 
-class ViperList_Interactor: ViperList_Interactor_Protocol {
-    var presenter: ViperList_Presenter_Protocol?
+class SferaListInteractor: SferaListInteractorProtocol {
+    var presenter: SferaListPresenterProtocol?
     
     func getViperListData() {
         
@@ -26,8 +26,8 @@ class ViperList_Interactor: ViperList_Interactor_Protocol {
             }
             
             do {
-                let viper = try JSONDecoder().decode([Viper].self, from: data)
-                self?.presenter?.interactorWithData(result: .success(viper))
+                let sfera = try JSONDecoder().decode([Sfera].self, from: data)
+                self?.presenter?.interactorWithData(result: .success(sfera))
             } catch {
                 self?.presenter?.interactorWithData(result: .failure(NetworkError.deodingError))
             }

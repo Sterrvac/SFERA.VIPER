@@ -7,41 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAEB6E4B29348A6100E75078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E4A29348A6100E75078 /* AppDelegate.swift */; };
+		FA04D4582944FF9E00147605 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4572944FF9E00147605 /* SceneDelegate.swift */; };
+		FA04D45C2945A2A400147605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D45B2945A2A400147605 /* AppDelegate.swift */; };
+		FA04D4E02945ED1000147605 /* SferaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4DF2945ED1000147605 /* SferaListView.swift */; };
+		FA04D4E22945ED2700147605 /* SferaListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4E12945ED2700147605 /* SferaListInteractor.swift */; };
+		FA04D4E42945ED3C00147605 /* SferaListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4E32945ED3C00147605 /* SferaListPresenter.swift */; };
+		FA04D4E62945ED5000147605 /* SferaListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4E52945ED5000147605 /* SferaListEntity.swift */; };
+		FA04D4E82945ED6400147605 /* SferaListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4E72945ED6400147605 /* SferaListRouter.swift */; };
+		FA04D4ED2945EE8D00147605 /* SferfFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4EC2945EE8D00147605 /* SferfFavoriteView.swift */; };
+		FA04D4EF2945EEC900147605 /* SferaFavoriteInteracror.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4EE2945EEC900147605 /* SferaFavoriteInteracror.swift */; };
+		FA04D4F12945EEDE00147605 /* SferaFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4F02945EEDE00147605 /* SferaFavoritePresenter.swift */; };
+		FA04D4F32945EEF500147605 /* SferaFavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4F22945EEF500147605 /* SferaFavoriteEntity.swift */; };
+		FA04D4F52945EF0E00147605 /* SferaFavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4F42945EF0E00147605 /* SferaFavoriteRouter.swift */; };
+		FA04D4FA2945EF5300147605 /* SferaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4F92945EF5300147605 /* SferaDetailView.swift */; };
+		FA04D4FC2945EF5D00147605 /* SferaDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4FB2945EF5D00147605 /* SferaDetailInteractor.swift */; };
+		FA04D4FE2945EF6400147605 /* SferaDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4FD2945EF6400147605 /* SferaDetailPresenter.swift */; };
+		FA04D5002945EF6A00147605 /* SferaDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D4FF2945EF6A00147605 /* SferaDetailEntity.swift */; };
+		FA04D5022945EF7200147605 /* SferaDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D5012945EF7200147605 /* SferaDetailRouter.swift */; };
+		FA04D5052945EFEB00147605 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D5042945EFEB00147605 /* TabBar.swift */; };
+		FA04D5072945EFF900147605 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04D5062945EFF900147605 /* UIImageViewExtension.swift */; };
 		FAEB6E5429348A6300E75078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEB6E5329348A6300E75078 /* Assets.xcassets */; };
 		FAEB6E5729348A6300E75078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEB6E5529348A6300E75078 /* LaunchScreen.storyboard */; };
-		FAEB6E6129348E8C00E75078 /* ViperList_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6029348E8C00E75078 /* ViperList_View.swift */; };
-		FAEB6E6329348EB600E75078 /* ViperList_Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6229348EB600E75078 /* ViperList_Interactor.swift */; };
-		FAEB6E6529348ED300E75078 /* ViperList_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6429348ED300E75078 /* ViperList_Presenter.swift */; };
-		FAEB6E6729348F0B00E75078 /* ViperList_Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6629348F0B00E75078 /* ViperList_Entity.swift */; };
-		FAEB6E6929348F1500E75078 /* ViperList_Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6829348F1500E75078 /* ViperList_Router.swift */; };
 		FAEB6E6C2934AC1D00E75078 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6B2934AC1D00E75078 /* WebService.swift */; };
-		FAEB6E6F2934CDFD00E75078 /* ViperDetail_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E6E2934CDFD00E75078 /* ViperDetail_View.swift */; };
-		FAEB6E712934CE1400E75078 /* ViperDetail_Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E702934CE1400E75078 /* ViperDetail_Interactor.swift */; };
-		FAEB6E732934CE2600E75078 /* ViperDetail_Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E722934CE2600E75078 /* ViperDetail_Presenter.swift */; };
-		FAEB6E752934CE4600E75078 /* ViperDetail_Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E742934CE4600E75078 /* ViperDetail_Entity.swift */; };
-		FAEB6E772934CE5900E75078 /* ViperDetail_Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E762934CE5900E75078 /* ViperDetail_Router.swift */; };
-		FAEB6E7A2934DC2800E75078 /* UllmageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA04D4572944FF9E00147605 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA04D45B2945A2A400147605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA04D4DF2945ED1000147605 /* SferaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaListView.swift; sourceTree = "<group>"; };
+		FA04D4E12945ED2700147605 /* SferaListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaListInteractor.swift; sourceTree = "<group>"; };
+		FA04D4E32945ED3C00147605 /* SferaListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaListPresenter.swift; sourceTree = "<group>"; };
+		FA04D4E52945ED5000147605 /* SferaListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaListEntity.swift; sourceTree = "<group>"; };
+		FA04D4E72945ED6400147605 /* SferaListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaListRouter.swift; sourceTree = "<group>"; };
+		FA04D4EC2945EE8D00147605 /* SferfFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferfFavoriteView.swift; sourceTree = "<group>"; };
+		FA04D4EE2945EEC900147605 /* SferaFavoriteInteracror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaFavoriteInteracror.swift; sourceTree = "<group>"; };
+		FA04D4F02945EEDE00147605 /* SferaFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaFavoritePresenter.swift; sourceTree = "<group>"; };
+		FA04D4F22945EEF500147605 /* SferaFavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaFavoriteEntity.swift; sourceTree = "<group>"; };
+		FA04D4F42945EF0E00147605 /* SferaFavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaFavoriteRouter.swift; sourceTree = "<group>"; };
+		FA04D4F92945EF5300147605 /* SferaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaDetailView.swift; sourceTree = "<group>"; };
+		FA04D4FB2945EF5D00147605 /* SferaDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaDetailInteractor.swift; sourceTree = "<group>"; };
+		FA04D4FD2945EF6400147605 /* SferaDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaDetailPresenter.swift; sourceTree = "<group>"; };
+		FA04D4FF2945EF6A00147605 /* SferaDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaDetailEntity.swift; sourceTree = "<group>"; };
+		FA04D5012945EF7200147605 /* SferaDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SferaDetailRouter.swift; sourceTree = "<group>"; };
+		FA04D5042945EFEB00147605 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		FA04D5062945EFF900147605 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		FAEB6E4729348A6100E75078 /* ViperSfera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperSfera.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAEB6E4A29348A6100E75078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEB6E5329348A6300E75078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEB6E5629348A6300E75078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEB6E5829348A6300E75078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEB6E6029348E8C00E75078 /* ViperList_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperList_View.swift; sourceTree = "<group>"; };
-		FAEB6E6229348EB600E75078 /* ViperList_Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperList_Interactor.swift; sourceTree = "<group>"; };
-		FAEB6E6429348ED300E75078 /* ViperList_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperList_Presenter.swift; sourceTree = "<group>"; };
-		FAEB6E6629348F0B00E75078 /* ViperList_Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperList_Entity.swift; sourceTree = "<group>"; };
-		FAEB6E6829348F1500E75078 /* ViperList_Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperList_Router.swift; sourceTree = "<group>"; };
 		FAEB6E6B2934AC1D00E75078 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		FAEB6E6E2934CDFD00E75078 /* ViperDetail_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_View.swift; sourceTree = "<group>"; };
-		FAEB6E702934CE1400E75078 /* ViperDetail_Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Interactor.swift; sourceTree = "<group>"; };
-		FAEB6E722934CE2600E75078 /* ViperDetail_Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Presenter.swift; sourceTree = "<group>"; };
-		FAEB6E742934CE4600E75078 /* ViperDetail_Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Entity.swift; sourceTree = "<group>"; };
-		FAEB6E762934CE5900E75078 /* ViperDetail_Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDetail_Router.swift; sourceTree = "<group>"; };
-		FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UllmageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA04D4EA2945EDCF00147605 /* SferaList */ = {
+			isa = PBXGroup;
+			children = (
+				FA04D4DF2945ED1000147605 /* SferaListView.swift */,
+				FA04D4E12945ED2700147605 /* SferaListInteractor.swift */,
+				FA04D4E32945ED3C00147605 /* SferaListPresenter.swift */,
+				FA04D4E52945ED5000147605 /* SferaListEntity.swift */,
+				FA04D4E72945ED6400147605 /* SferaListRouter.swift */,
+			);
+			path = SferaList;
+			sourceTree = "<group>";
+		};
+		FA04D4EB2945EE0E00147605 /* SferaFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				FA04D4EC2945EE8D00147605 /* SferfFavoriteView.swift */,
+				FA04D4EE2945EEC900147605 /* SferaFavoriteInteracror.swift */,
+				FA04D4F02945EEDE00147605 /* SferaFavoritePresenter.swift */,
+				FA04D4F22945EEF500147605 /* SferaFavoriteEntity.swift */,
+				FA04D4F42945EF0E00147605 /* SferaFavoriteRouter.swift */,
+			);
+			path = SferaFavorite;
+			sourceTree = "<group>";
+		};
+		FA04D4F62945EF2100147605 /* SferaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA04D4F92945EF5300147605 /* SferaDetailView.swift */,
+				FA04D4FB2945EF5D00147605 /* SferaDetailInteractor.swift */,
+				FA04D4FD2945EF6400147605 /* SferaDetailPresenter.swift */,
+				FA04D4FF2945EF6A00147605 /* SferaDetailEntity.swift */,
+				FA04D5012945EF7200147605 /* SferaDetailRouter.swift */,
+			);
+			path = SferaDetail;
+			sourceTree = "<group>";
+		};
+		FA04D5032945EFC800147605 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				FA04D5042945EFEB00147605 /* TabBar.swift */,
+				FA04D5062945EFF900147605 /* UIImageViewExtension.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		FAEB6E3E29348A6100E75078 = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +134,12 @@
 			isa = PBXGroup;
 			children = (
 				FAEB6E5E29348A9F00E75078 /* Files */,
-				FAEB6E4A29348A6100E75078 /* AppDelegate.swift */,
-				FAEB6E5F29348E2D00E75078 /* ViperList */,
-				FAEB6E6D2934CD8700E75078 /* ViperDetail */,
-				FAEB6E782934DBB700E75078 /* Extentions */,
+				FA04D45B2945A2A400147605 /* AppDelegate.swift */,
+				FA04D4572944FF9E00147605 /* SceneDelegate.swift */,
+				FA04D4EA2945EDCF00147605 /* SferaList */,
+				FA04D4EB2945EE0E00147605 /* SferaFavorite */,
+				FA04D4F62945EF2100147605 /* SferaDetail */,
+				FA04D5032945EFC800147605 /* Extentions */,
 				FAEB6E6A2934ABF300E75078 /* WebService */,
 			);
 			path = ViperSfera;
@@ -94,44 +155,12 @@
 			name = Files;
 			sourceTree = "<group>";
 		};
-		FAEB6E5F29348E2D00E75078 /* ViperList */ = {
-			isa = PBXGroup;
-			children = (
-				FAEB6E6029348E8C00E75078 /* ViperList_View.swift */,
-				FAEB6E6229348EB600E75078 /* ViperList_Interactor.swift */,
-				FAEB6E6429348ED300E75078 /* ViperList_Presenter.swift */,
-				FAEB6E6629348F0B00E75078 /* ViperList_Entity.swift */,
-				FAEB6E6829348F1500E75078 /* ViperList_Router.swift */,
-			);
-			path = ViperList;
-			sourceTree = "<group>";
-		};
 		FAEB6E6A2934ABF300E75078 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
 				FAEB6E6B2934AC1D00E75078 /* WebService.swift */,
 			);
 			path = WebService;
-			sourceTree = "<group>";
-		};
-		FAEB6E6D2934CD8700E75078 /* ViperDetail */ = {
-			isa = PBXGroup;
-			children = (
-				FAEB6E6E2934CDFD00E75078 /* ViperDetail_View.swift */,
-				FAEB6E702934CE1400E75078 /* ViperDetail_Interactor.swift */,
-				FAEB6E722934CE2600E75078 /* ViperDetail_Presenter.swift */,
-				FAEB6E742934CE4600E75078 /* ViperDetail_Entity.swift */,
-				FAEB6E762934CE5900E75078 /* ViperDetail_Router.swift */,
-			);
-			path = ViperDetail;
-			sourceTree = "<group>";
-		};
-		FAEB6E782934DBB700E75078 /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				FAEB6E792934DC2800E75078 /* UllmageView+Extension.swift */,
-			);
-			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,19 +233,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEB6E772934CE5900E75078 /* ViperDetail_Router.swift in Sources */,
-				FAEB6E732934CE2600E75078 /* ViperDetail_Presenter.swift in Sources */,
-				FAEB6E752934CE4600E75078 /* ViperDetail_Entity.swift in Sources */,
-				FAEB6E6929348F1500E75078 /* ViperList_Router.swift in Sources */,
+				FA04D4F12945EEDE00147605 /* SferaFavoritePresenter.swift in Sources */,
+				FA04D4EF2945EEC900147605 /* SferaFavoriteInteracror.swift in Sources */,
+				FA04D4E62945ED5000147605 /* SferaListEntity.swift in Sources */,
+				FA04D5072945EFF900147605 /* UIImageViewExtension.swift in Sources */,
+				FA04D4ED2945EE8D00147605 /* SferfFavoriteView.swift in Sources */,
+				FA04D5002945EF6A00147605 /* SferaDetailEntity.swift in Sources */,
 				FAEB6E6C2934AC1D00E75078 /* WebService.swift in Sources */,
-				FAEB6E6529348ED300E75078 /* ViperList_Presenter.swift in Sources */,
-				FAEB6E6329348EB600E75078 /* ViperList_Interactor.swift in Sources */,
-				FAEB6E7A2934DC2800E75078 /* UllmageView+Extension.swift in Sources */,
-				FAEB6E6F2934CDFD00E75078 /* ViperDetail_View.swift in Sources */,
-				FAEB6E6729348F0B00E75078 /* ViperList_Entity.swift in Sources */,
-				FAEB6E712934CE1400E75078 /* ViperDetail_Interactor.swift in Sources */,
-				FAEB6E6129348E8C00E75078 /* ViperList_View.swift in Sources */,
-				FAEB6E4B29348A6100E75078 /* AppDelegate.swift in Sources */,
+				FA04D45C2945A2A400147605 /* AppDelegate.swift in Sources */,
+				FA04D4E42945ED3C00147605 /* SferaListPresenter.swift in Sources */,
+				FA04D4E22945ED2700147605 /* SferaListInteractor.swift in Sources */,
+				FA04D4FE2945EF6400147605 /* SferaDetailPresenter.swift in Sources */,
+				FA04D4E02945ED1000147605 /* SferaListView.swift in Sources */,
+				FA04D4FA2945EF5300147605 /* SferaDetailView.swift in Sources */,
+				FA04D4E82945ED6400147605 /* SferaListRouter.swift in Sources */,
+				FA04D5022945EF7200147605 /* SferaDetailRouter.swift in Sources */,
+				FA04D4F52945EF0E00147605 /* SferaFavoriteRouter.swift in Sources */,
+				FA04D4F32945EEF500147605 /* SferaFavoriteEntity.swift in Sources */,
+				FA04D4FC2945EF5D00147605 /* SferaDetailInteractor.swift in Sources */,
+				FA04D5052945EFEB00147605 /* TabBar.swift in Sources */,
+				FA04D4582944FF9E00147605 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +320,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -338,9 +376,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -362,7 +402,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +430,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

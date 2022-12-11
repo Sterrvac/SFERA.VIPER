@@ -10,30 +10,38 @@ import UIKit
 
 // Talks to presenter
 
-protocol ViperList_View_Protocol {
-    var presenter: ViperList_Presenter_Protocol? {get set}
+protocol SferaListViewProtocol {
+    var presenter: SferaListPresenterProtocol? { get set }
     
-    func update(with viper:[Viper])
+    func update(with sfera:[Sfera])
     func update(with error:String)
 }
 
-class ViperListViewController: UIViewController, ViperList_View_Protocol {
+class SferaListViewController: UIViewController, SferaListViewProtocol {
 
     // MARK: - COMPONENT
     private let tableView = UITableView()
     private let messageLabel = UILabel()
     private let searchController = UISearchController(searchResultsController: nil)
+    private var filteredSfera: [Sfera] = []
+    private var searchBarIsEmpty: Bool {
+        if let title = searchController.searchBar.text { return title.isEmpty } else { return false }
+    }
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
     
     // MARK: - PROPERTY
-    var presenter: ViperList_Presenter_Protocol?
-    var viper: [Viper] = []
+    var resultsTableViewController: SferaListPresenterProtocol!
+    var presenter: SferaListPresenterProtocol?
+    var sferas: [Sfera] = []
     
     // MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar()
         style()
         layout()
+        setUpSearchController()
         presenter?.viewDidLoad()
     }
     
@@ -42,16 +50,12 @@ class ViperListViewController: UIViewController, ViperList_View_Protocol {
             tableView.deselectRow(at: seledtIndex, animated: true)
         }
     }
+    
 }
 
-extension ViperListViewController {
-    func searchBar() {
-        navigationItem.searchController = searchController
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "Search"
-    }
+extension SferaListViewController {
     
-    func style() {
+    private func style() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.isHidden = true
@@ -62,11 +66,10 @@ extension ViperListViewController {
         messageLabel.isHidden = false
         messageLabel.text = "Loading..."
         messageLabel.font = UIFont.systemFont(ofSize: 20)
-        messageLabel.textColor = .black
         messageLabel.textAlignment = .center
     }
     
-    func layout() {
+    private func layout() {
         view.addSubview(tableView)
         view.addSubview(messageLabel)
         
@@ -86,51 +89,92 @@ extension ViperListViewController {
 }
 
 // MARK: - ViperList_View_Protocol
-extension ViperListViewController {
-    func update(with viper: [Viper]) {
+extension SferaListViewController {
+    func update(with sfera: [Sfera]) {
         DispatchQueue.main.async { [weak self] in
-            self?.viper = viper
+            self?.sferas = sfera
+            
             self?.messageLabel.isHidden = true
+            
             self?.tableView.reloadData()
             self?.tableView.isHidden = false
         }
     }
     func update(with error: String) {
         DispatchQueue.main.async { [weak self] in
-            self?.viper = []
+            self?.sferas = []
             self?.tableView.isHidden = true
             
             self?.messageLabel.isHidden = false
             self?.messageLabel.text = error
         }
     }
+    
 }
 // MARK: - UITableViewDelegate
-extension ViperListViewController: UITableViewDelegate {
+extension SferaListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.tapOnDetail(viper[indexPath.row])
-        
+        if isFiltering {
+            presenter?.tapOnDetail((filteredSfera[indexPath.row]))
+        } else {
+            presenter?.tapOnDetail((sferas[indexPath.row]))
+        }
     }
 }
 
 // MARK: - UITableViewDataSource
-extension ViperListViewController: UITableViewDataSource {
+extension SferaListViewController: UITableViewDataSource {
+    var isSearchBarEmpty: Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viper.count
+        if isFiltering {
+            return filteredSfera.count
+        } else {
+            return sferas.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        if #available(iOS 14.0, *) {
-            var content = cell.defaultContentConfiguration()
-            content.text = viper[indexPath.row].title
-            content.secondaryText = "\(viper[indexPath.row].year)"
-            cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let sfera: Sfera
+        if isFiltering {
+            sfera = filteredSfera[indexPath.row]
         } else {
-            // Fallback on earlier versions
+            sfera = sferas[indexPath.row]
         }
+        cell.textLabel?.text = sfera.title
         return cell
     }
     
-    
+    func filterContentForSearchText(_ searchText: String) {
+      filteredSfera = sferas.filter { (sfera: Sfera) -> Bool in
+        return sfera.title.lowercased().contains(searchText.lowercased())
+      }
+      
+      tableView.reloadData()
+    }
+
 }
+
+// MARK: Search
+extension SferaListViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+    private func setUpSearchController() {
+        navigationItem.searchController = searchController
+        navigationItem.title = "SearchController"
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+    }
+}
+
+

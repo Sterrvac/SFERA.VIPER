@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Viper: Decodable {
+struct Sfera: Decodable {
     let title: String
     let year: Int
     let creator: [String]

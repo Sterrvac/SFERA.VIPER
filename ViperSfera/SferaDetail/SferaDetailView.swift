@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-protocol ViperDetail_View_Protocol {
-    var presenter: ViperDetail_Presenter_Protocol? { get set }
+protocol SferaDetailViewProtocol {
+    var presenter: SferaDetailPresenterProtocol? { get set }
     
-    func update(with viper: Viper)
+    func update(with sfera: Sfera)
     func update(with error: String)
 }
 
 
-class ViperDetailViewController: UIViewController, ViperDetail_View_Protocol {
+class SferaDetailViewController: UIViewController, SferaDetailViewProtocol {
     
     //MARK: - COMPONENT
     let stackView = UIStackView()
@@ -24,7 +24,7 @@ class ViperDetailViewController: UIViewController, ViperDetail_View_Protocol {
     let imageView = UIImageView()
     
     //MARK: - PROPERTY
-    var presenter: ViperDetail_Presenter_Protocol?
+    var presenter: SferaDetailPresenterProtocol?
     
     //MARK: - LIFE CYCLE
     override func viewDidLoad() {
@@ -35,10 +35,9 @@ class ViperDetailViewController: UIViewController, ViperDetail_View_Protocol {
     }
 }
 
-extension ViperDetailViewController {
+extension SferaDetailViewController {
     func style() {
         view.backgroundColor = .white
-        
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -68,12 +67,12 @@ extension ViperDetailViewController {
     }
 }
 // MARK: - ViperDetail_View_Protocol
-extension ViperDetailViewController {
-    func update(with viper: Viper) {
+extension SferaDetailViewController {
+    func update(with sfera: Sfera) {
         label.textColor = .black
-        label.text = viper.title
+        label.text = sfera.title
         
-        if let url = URL(string: viper.image) {
+        if let url = URL(string: sfera.image) {
             imageView.load(url: url)
             imageView.isHidden = false
         } else {
